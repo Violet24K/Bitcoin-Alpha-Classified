@@ -2,14 +2,12 @@ from dataset_property import NAME, DATASET_SIZE
 NUM_NODES_SUB = 100
 import pdb
 
-def node_attr_classifier_left(d):
+def node_attr_classifier(d):
     if d < 100:
         return int(d/5)
     else:
         return 20
 
-def node_attr_classifier_right(d):
-    return 151 + node_attr_classifier_left(d)
 
 def is_in_subgraph(number):
     if (number < 0):
@@ -45,7 +43,7 @@ if __name__ == '__main__':
         edge_file.write(str(node1 - 1) + ',' + str(node2 - 1) + ',' + str(attr - 1) + '\n')
     edge_file.close()
     for i in range(DATASET_SIZE):
-        node_attr_file.write(str(i) + ',' + str(node_attr_classifier_left(node_degree_count[i])) + '\n')
+        node_attr_file.write(str(i) + ',' + str(node_attr_classifier(node_degree_count[i])) + '\n')
     node_attr_file.close()
 
     new_edge_file = open("./" + NAME + "/edge.txt", 'r')
