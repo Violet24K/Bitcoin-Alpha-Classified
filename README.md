@@ -12,7 +12,7 @@ The meaning of the columns in out.soc-sign-bitcoinalpha are:
 
 
 ### Static dataset: bitcoinalpha
-This folder contains static version of full bitcoinalpha dataset. The original bitcoinalpha dataset provides node attribute as users and items. We further classify the nodes into more types by the number of edges they have. Nodes with more edges belong to attributes with higher numbers. The files node_attr.txt and edge.txt respectively denotes the node attributes and edge attributes, where the last column is the attribute. The files node_attr_sub.txt and edge_sub.txt denotes note attributes and edge attributes for a sub-graph of bitcoinalpha, which we used for graph alignment task, where ground_truth.txt records the correct match.
+This folder contains static version of full bitcoinalpha dataset. The original bitcoinalpha dataset does not provide node attributes. We further classify the nodes into more types by the number of edges they have. Nodes with more edges belong to attributes with higher numbers. The files node_attr.txt and edge.txt respectively denotes the node attributes and edge attributes, where the last column is the attribute. The files node_attr_sub.txt and edge_sub.txt denotes note attributes and edge attributes for a sub-graph of bitcoinalpha, which we used for graph alignment task, where ground_truth.txt records the correct match.
 
 This static version of bitcoinalpha can be obtained by running dataprocessing.py. The number of nodes in the sub-graph can be adjusted by hyperparameter NUM_NODES_SUB.
 
